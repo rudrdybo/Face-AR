@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        Testing Page
+    </body>
+
+    <script>
+        console.log("hhhhh")
+        let request = new XMLHttpRequest();
+        request.open("GET","https://gcp.icustomizer.dybo.io/product/api/v1/ar/get-webar-links/BGDYDEMO001");
+        request.setRequestHeader("x-api-key", "J88zzsM9.q30kus6n44jobT2fhYh9Zoz1JGC7QnFv")
+        request.send();
+        request.onload =  () => {
+            //console.log(request);
+            if(request.status===200)
+            {
+                console.log("hi")
+               // console.log(JSON.parse(request.response));
+            }
+            else{
+             //   console.log('error ${request.status} ${request.statusText}')
+            }
+        }
+    </script>
+</html>
